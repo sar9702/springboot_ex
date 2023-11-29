@@ -11,6 +11,7 @@ public class MvcConfig implements WebMvcConfigurer {
         WebMvcConfigurer.super.addViewControllers(registry);
 
         // 컨트롤러 로직 없이 바로 뷰를 리턴하는 경우 ViewController 사용
+        registry.addViewController("/").setViewName("/home/home");
         registry.addViewController("/home/home").setViewName("/home/home");
         registry.addViewController("/member/list").setViewName("/member/member_list");
     }
