@@ -5,6 +5,7 @@ import com.example.springboot_ex.repository.StudyRecordRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -24,11 +25,13 @@ public class StudyRecordService {
 
     /* Insert */
     public void doInsert(Study_record studyRecord) {
+        studyRecord.setReg_day(LocalDateTime.now());
         studyRecordRepo.save(studyRecord);
     }
 
     /* Update */
     public void doUpdate(Study_record studyRecord) {
+        studyRecord.setReg_day(LocalDateTime.now());
         studyRecordRepo.save(studyRecord);
     }
 
