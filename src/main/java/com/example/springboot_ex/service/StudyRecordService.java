@@ -25,13 +25,11 @@ public class StudyRecordService {
 
     /* Insert */
     public void doInsert(Study_record studyRecord) {
-        studyRecord.setReg_day(LocalDateTime.now());
         studyRecordRepo.save(studyRecord);
     }
 
     /* Update */
     public void doUpdate(Study_record studyRecord) {
-        studyRecord.setReg_day(LocalDateTime.now());
         studyRecordRepo.save(studyRecord);
     }
 
