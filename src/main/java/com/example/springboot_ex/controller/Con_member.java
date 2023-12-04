@@ -1,7 +1,6 @@
 package com.example.springboot_ex.controller;
 
 import com.example.springboot_ex.entity.Study_member;
-import com.example.springboot_ex.entity.Study_record;
 import com.example.springboot_ex.service.StudyMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,7 +32,7 @@ public class Con_member {
 
     /* 회원가입 */
     @PostMapping("/insert_exe")
-    public String doInsExe(@ModelAttribute Study_member studyMember) {
+    public String doInsExe(@ModelAttribute Study_member studyMember) throws Exception {
         studyMemberService.doInsert(studyMember);
         return "redirect:/member/list";
     }
