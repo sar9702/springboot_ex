@@ -27,7 +27,7 @@
         </div>
 
         <!-- 데이터 출력 부분 -->
-        <th:bock th:each="study : ${list}">
+        <th:block th:each="study : ${list}">
             <div class="row mb-2">
                 <div class="col" th:text="${study.getKey_id()}">Key_Id(Vo)</div>
                 <div class="col" th:text="${study.getStudy_day()}">공부일자</div>
@@ -36,7 +36,7 @@
                 <div class="col"><a th:href="@{/study/modify(key_id=${study.getKey_id()})}">수정</a></div>
                 <div class="col"><a th:href="@{/study/delete(key_id=${study.getKey_id()})}">삭제</a></div>
             </div>
-        </th:bock>
+        </th:block>
     </div>
 
 </main>
